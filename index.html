@@ -9,18 +9,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
-
-  Score
-  Rules
-
-  You Picked
-  The House Picked
-
-  You Win
-  You Lose
-
-  Play Again
-
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution {
@@ -35,19 +23,51 @@
 </head>
 
 <body>
-  <header>
+  <header class="header-box">
     <div class="header-title">
-      <h1>
-        ROCK<br>PAPER<br>SCISSORS
-      </h1>
+      <img src="./images/logo.svg" alt="Logo">
     </div>
     <div class="header-score">
       <h4>SCORE</h4>
       <p>0</p>
     </div>
   </header>
+  <main>
+    <div class="game">
+      <img src="./images/bg-triangle.svg" alt="Triangle Background">
 
+      <div class="paper-circle">
+        <div class="big-circle dark-blue">
+          <div class="big-circle__transform"></div>
+          <div class="small-circle">
+            <div class="small-circle__transform"></div>
+          </div>
+          <img src="./images/icon-paper.svg" alt="Paper Icon">
+        </div>
+      </div>
 
+      <div class="scissor-circle">
+        <div class="big-circle dark-blue">
+          <div class="big-circle__transform"></div>
+          <div class="small-circle">
+            <div class="small-circle__transform"></div>
+          </div>
+        </div>
+        <img src="./images/icon-scissors.svg" alt="Scissors Icon">
+        </svg>
+      </div>
+
+      <div class="rock-circle">
+        <div class="big-circle dark-blue">
+          <div class="big-circle__transform"></div>
+          <div class="small-circle">
+            <div class="small-circle__transform"></div>
+          </div>
+        </div>
+        <img src="./images/icon-rock.svg" alt="Rock Icon">
+      </div>
+    </div>
+  </main>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
