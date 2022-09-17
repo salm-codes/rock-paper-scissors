@@ -13,11 +13,7 @@ body {
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-weight: 600;
   background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
-}
-
-header,
-main {
-  width: 90%;
+  overflow-y: hidden;
 }
 
 .header-box {
@@ -77,17 +73,20 @@ main {
 .paper-circle {
   position: relative;
   left: 40px;
+  cursor: pointer;
 }
 
 .scissor-circle {
   position: relative;
   right: 40px;
+  cursor: pointer;
 }
 
 .rock-circle {
   align-self: flex-end;
   position: relative;
   bottom: 60px;
+  cursor: pointer;
 }
 
 .big-circle {
@@ -98,7 +97,8 @@ main {
 }
 
 .big-circle:hover {
-  transform: scale(1.2);
+  transition: all 0.4s ease-in-out;
+  transform: scale(1.1);
 }
 
 .big-circle__transform {
@@ -154,6 +154,53 @@ main {
 
 .light-white {
   background: linear-gradient(white, whitesmoke);
+}
+
+/* Rules styles */
+
+.rules-popup>h3 {
+  display: inline-block;
+  color: #dcd7d7;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid hsl(217, 16%, 45%);
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+}
+
+.rules-content.popup-active {
+  display: block;
+}
+
+.rules-content {
+  display: none;
+  height: auto;
+  width: auto;
+  background-color: #eee;
+  padding: 20px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rules-close {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.rules-close>h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.close-icon {
+  cursor: pointer;
 }
 
 .attribution {
