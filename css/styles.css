@@ -15,6 +15,39 @@ body {
   background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
 }
 
+header,
+main {
+  width: 90%;
+}
+
+.header-box {
+  width: 60%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid hsl(217, 16%, 45%);
+  border-radius: 10px;
+}
+
+.header-score-card {
+  padding: 10px 30px;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+
+.score-text {
+  text-transform: uppercase;
+  color: hsl(229, 64%, 46%);
+}
+
+.score-points {
+  font-size: 48px;
+  text-align: center;
+  color: hsl(229, 25%, 31%);
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -22,9 +55,4 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
-
-header,
-main {
-  width: 80%;
 }
