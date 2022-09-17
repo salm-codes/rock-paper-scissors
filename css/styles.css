@@ -48,6 +48,114 @@ main {
   color: hsl(229, 25%, 31%);
 }
 
+/* Main styles */
+
+.game {
+  height: 70vh;
+  position: relative;
+}
+
+.game img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.game-circle {
+  width: 473px;
+  height: 438px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+}
+
+.paper-circle {
+  position: relative;
+  left: 40px;
+}
+
+.scissor-circle {
+  position: relative;
+  right: 40px;
+}
+
+.rock-circle {
+  align-self: flex-end;
+  position: relative;
+  bottom: 60px;
+}
+
+.big-circle {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  box-shadow: 0 3px 3px rgb(0 0 0 / 25%);
+}
+
+.big-circle:hover {
+  transform: scale(1.2);
+}
+
+.big-circle__transform {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  transform: translateY(-6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.small-circle {
+  height: 7.8rem;
+  width: 7.8rem;
+  border-radius: 50%;
+  background-color: #dcd7d7;
+}
+
+.small-circle__transform {
+  height: 7.8rem;
+  width: 7.8rem;
+  border-radius: 50%;
+  transform: translateY(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blue {
+  background-color: #2642bf;
+}
+
+.yellow {
+  background-color: #c76b18;
+}
+
+.red {
+  background-color: #9d1736;
+}
+
+.light-blue {
+  background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+}
+
+.light-yellow {
+  background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+}
+
+.light-red {
+  background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+}
+
+.light-white {
+  background: linear-gradient(white, whitesmoke);
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
