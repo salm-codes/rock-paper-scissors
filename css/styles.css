@@ -47,8 +47,49 @@ body {
 /* Main styles */
 
 .game {
-  height: 70vh;
+  height: 65vh;
+}
+
+.game-play {
+  height: 100%;
   position: relative;
+}
+
+.disable {
+  display: none;
+}
+
+.game-play-s2 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+
+.game-play-s2 h3 {
+  color: #eee;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.game-play-s2 .big-circle,
+.game-play-s2 .big-circle__transform {
+  width: 13rem;
+  height: 13rem;
+}
+
+.game-play-s2 .small-circle,
+.game-play-s2 .small-circle__transform {
+  width: 10rem;
+  height: 10rem;
+}
+
+.temp-circle {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  background: rgb(222, 209, 209);
 }
 
 .game img {
