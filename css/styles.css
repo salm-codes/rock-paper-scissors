@@ -60,11 +60,11 @@ body {
 }
 
 .game-play-s2 {
-  height: 100%;
+  height: 75%;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10%;
+  gap: 5%;
 }
 
 .game-play-s2 h3 {
@@ -85,11 +85,30 @@ body {
   height: 10rem;
 }
 
+.play-again {
+  text-align: center;
+}
+
+.play-again h1 {
+  color: #eee;
+  margin-bottom: 20px;
+}
+
+.btn-play {
+  color: red;
+  padding-block: 10px;
+  padding-inline: 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
 .temp-circle {
-  height: 10rem;
-  width: 10rem;
+  height: 13rem;
+  width: 13rem;
   border-radius: 50%;
-  background: rgb(222, 209, 209);
+  background: hsl(229, 25%, 31%);
 }
 
 .game img {
