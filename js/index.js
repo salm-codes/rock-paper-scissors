@@ -59,12 +59,12 @@ arr.forEach(div => {
 
     setTimeout(function () {
       housePick.innerHTML = housePicked.outerHTML;
-    }, 1500);
+    }, 1000);
 
     setTimeout(() => {
       document.querySelector('.play-again').classList.toggle('disable');
       update(pid, hid, scorePoints);
-    }, 2000);
+    }, 1500);
   });
 });
 
