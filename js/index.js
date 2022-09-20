@@ -42,13 +42,13 @@ function update(p, h, s) {
   if ((p === 1 && h === 2) || (p === 2 && h === 3) || (p === 3 && h === 1)) {
     score = score + 1;
     s.textContent = `${score}`;
-    document.querySelector('.result2').classList.add('disable');
     playwin.play();
+    document.querySelector('.result').innerHTML = 'YOU WIN';
   } else {
     score = score - 1;
     s.textContent = `${score}`;
-    document.querySelector('.result1').classList.add('disable');
     playLose.play();
+    document.querySelector('.result').innerHTML = 'YOU LOSE';
   }
 }
 
@@ -87,6 +87,5 @@ document.querySelector('.btn-play').addEventListener('click', function () {
   tempArr = [];
   housePick.innerHTML = '<div class="temp-circle"></div>';
   document.querySelector('.play-again').classList.toggle('disable');
-  document.querySelector('.result1').classList.remove('disable');
-  document.querySelector('.result2').classList.remove('disable');
+  document.querySelector('.result').classList.remove('disable');
 });
