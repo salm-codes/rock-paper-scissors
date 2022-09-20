@@ -67,6 +67,10 @@ body {
   gap: 5%;
 }
 
+.game-play-s2.disable {
+  display: none;
+}
+
 .game-play-s2 h2 {
   color: #eee;
   text-align: center;
