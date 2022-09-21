@@ -265,6 +265,7 @@ main {
 
 .rules-content.popup-active {
   display: block;
+  clip-path: circle(100% at 50% 50%);
 }
 
 .rules-content {
@@ -423,8 +424,34 @@ main {
 
   /* Rules */
   .btn {
-    bottom: 20px;
-    right: 20px;
+    max-width: fit-content;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .rules-content {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 100vw;
+    height: 100vh;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem;
+    clip-path: circle(0 at 50% 50%);
+    transition: all 0.5s ease-out;
+    z-index: 99;
+  }
+
+  .rules-content-box {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -458,12 +485,12 @@ main {
 
   .paper-circle {
     top: 33px;
-    left: 20px;
+    left: 5px;
   }
 
   .scissor-circle {
     top: 33px;
-    right: 20px;
+    right: 5px;
   }
 
   .rock-circle {
