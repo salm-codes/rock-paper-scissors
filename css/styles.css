@@ -7,6 +7,7 @@
 html,
 body {
   height: 100vh;
+  overflow-y: hidden;
 }
 
 body {
@@ -16,9 +17,16 @@ body {
   overflow-y: hidden;
 }
 
+header {
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .header-box {
   width: 60%;
-  margin: 50px auto;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,13 +53,8 @@ body {
 }
 
 /* Main styles */
-
-.game {
-  height: 65vh;
-}
-
-.game-play {
-  height: 100%;
+main {
+  height: 75%;
   position: relative;
 }
 
@@ -260,7 +263,7 @@ body {
   background-color: #eee;
   padding: 20px;
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 5px;
@@ -309,6 +312,7 @@ body {
   /* header */
   .header-box {
     padding: 10px;
+    width: 60%;
   }
 
   .header-box img {
@@ -323,6 +327,7 @@ body {
     font-size: 32px;
   }
 
+  /* Game */
   .big-circle,
   .big-circle__transform {
     width: 9rem;
@@ -355,10 +360,6 @@ body {
     flex-direction: column-reverse;
   }
 
-  .game-play-s2 {
-    margin-top: 100px;
-  }
-
   .game-play-s2 .big-circle,
   .game-play-s2 .big-circle__transform {
     width: 11rem;
@@ -376,7 +377,6 @@ body {
     height: 11rem;
   }
 
-  /* Game */
 
   .game-play-s2 {
     gap: 10%;
@@ -384,7 +384,6 @@ body {
 
   .play-again-mobile {
     display: block;
-    margin-top: 50px;
   }
 
   .play-again-mobile h1 {
@@ -405,5 +404,75 @@ body {
 
   .strict-disable {
     display: none;
+  }
+
+  /* Rules */
+  .btn {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width:576px) {
+
+  /* Header */
+  .header-box {
+    width: 80%;
+  }
+}
+
+@media (max-width:440px) {
+
+  /* Game */
+
+  .game-play>img {
+    width: 300px;
+  }
+
+  .big-circle,
+  .big-circle__transform {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+
+  .small-circle,
+  .small-circle__transform {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+
+  .paper-circle {
+    top: 33px;
+    left: 20px;
+  }
+
+  .scissor-circle {
+    top: 33px;
+    right: 20px;
+  }
+
+  .rock-circle {
+    bottom: 80px;
+  }
+
+  .game-play-s2 h2 {
+    font-size: 18px;
+  }
+
+  .game-play-s2 .big-circle,
+  .game-play-s2 .big-circle__transform {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+
+  .game-play-s2 .small-circle,
+  .game-play-s2 .small-circle__transform {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+
+  .temp-circle {
+    width: 7.5rem;
+    height: 7.5rem;
   }
 }
