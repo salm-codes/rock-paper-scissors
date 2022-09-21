@@ -19,6 +19,8 @@ const gamePlay2 = document.querySelector('.game-play-s2');
 const playerPick = document.querySelector('.player-pick');
 const housePick = document.querySelector('.house-pick');
 const scorePoints = document.querySelector('.score-points');
+const result = document.querySelectorAll('.result');
+const btnPlay = document.querySelectorAll('.btn-play');
 
 let arr = Array.from(gameCircle);
 let tempArr;
@@ -43,12 +45,16 @@ function update(p, h, s) {
     score = score + 1;
     s.textContent = `${score}`;
     playwin.play();
-    document.querySelector('.result').innerHTML = 'YOU WIN';
+    result.forEach(e => {
+      e.innerHTML = 'YOU WIN';
+    });
   } else {
     score = score - 1;
     s.textContent = `${score}`;
     playLose.play();
-    document.querySelector('.result').innerHTML = 'YOU LOSE';
+    result.forEach(e => {
+      e.innerHTML = 'YOU LOSE';
+    });
   }
 }
 
@@ -76,16 +82,23 @@ arr.forEach(div => {
 
     setTimeout(() => {
       document.querySelector('.play-again').classList.toggle('disable');
+      document
+        .querySelector('.play-again-mobile')
+        .classList.toggle('mobile-disable');
       update(pid, hid, scorePoints);
     }, 2000);
   });
 });
 
-document.querySelector('.btn-play').addEventListener('click', function () {
-  gamePlay.classList.remove('disable');
-  gamePlay2.classList.toggle('disable');
-  tempArr = [];
-  housePick.innerHTML = '<div class="temp-circle"></div>';
-  document.querySelector('.play-again').classList.toggle('disable');
-  document.querySelector('.result').classList.remove('disable');
+btnPlay.forEach(play => {
+  play.addEventListener('click', function () {
+    gamePlay.classList.remove('disable');
+    gamePlay2.classList.toggle('disable');
+    tempArr = [];
+    housePick.innerHTML = '<div class="temp-circle"></div>';
+    document.querySelector('.play-again').classList.toggle('disable');
+    document
+      .querySelector('.play-again-mobile')
+      .classList.toggle('mobile-disable');
+  });
 });
