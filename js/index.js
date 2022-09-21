@@ -95,7 +95,8 @@ btnPlay.forEach(play => {
     gamePlay.classList.remove('disable');
     gamePlay2.classList.toggle('disable');
     tempArr = [];
-    housePick.innerHTML = '<div class="temp-circle"></div>';
+    housePick.innerHTML =
+      '<div class="temp-circle"><div class="temp-circle-small"></div></div>';
     document.querySelector('.play-again').classList.toggle('disable');
     document
       .querySelector('.play-again-mobile')
