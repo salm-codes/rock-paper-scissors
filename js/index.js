@@ -41,10 +41,28 @@ function getRandomItem(list) {
 }
 
 function update(p, h, s) {
-  if ((p === 1 && h === 2) || (p === 2 && h === 3) || (p === 3 && h === 1)) {
+  let pid = Number(p.dataset.id);
+  let hid = Number(h.dataset.id);
+
+  if (
+    (pid === 1 && hid === 2) ||
+    (pid === 2 && hid === 3) ||
+    (pid === 3 && hid === 1)
+  ) {
     score = score + 1;
     s.textContent = `${score}`;
     playwin.play();
+    const div1 = document.createElement('div');
+    const div2 = document.createElement('div');
+    const div3 = document.createElement('div');
+
+    div1.classList.add('circle', 'circle-1');
+    div2.classList.add('circle', 'circle-2');
+    div3.classList.add('circle', 'circle-3');
+
+    playerPick.insertBefore(div3, playerPick.children[0]);
+    playerPick.insertBefore(div2, playerPick.children[0]);
+    playerPick.insertBefore(div1, playerPick.children[0]);
     result.forEach(e => {
       e.innerHTML = 'YOU WIN';
     });
@@ -52,6 +70,17 @@ function update(p, h, s) {
     score = score - 1;
     s.textContent = `${score}`;
     playLose.play();
+    const div1 = document.createElement('div');
+    const div2 = document.createElement('div');
+    const div3 = document.createElement('div');
+
+    div1.classList.add('circle', 'circle-1');
+    div2.classList.add('circle', 'circle-2');
+    div3.classList.add('circle', 'circle-3');
+
+    housePick.insertBefore(div3, housePick.children[0]);
+    housePick.insertBefore(div2, housePick.children[0]);
+    housePick.insertBefore(div1, housePick.children[0]);
     result.forEach(e => {
       e.innerHTML = 'YOU LOSE';
     });
@@ -72,21 +101,19 @@ arr.forEach(div => {
     });
     /* Getting random item from non-choosed item */
     let housePicked = getRandomItem(tempArr);
-    let pid = Number(playerPicked.dataset.id);
-    let hid = Number(housePicked.dataset.id);
 
     setTimeout(function () {
       housePick.innerHTML = housePicked.outerHTML;
       bubble.play();
-    }, 1000);
+    }, 750);
 
     setTimeout(() => {
       document.querySelector('.play-again').classList.toggle('disable');
       document
         .querySelector('.play-again-mobile')
         .classList.toggle('mobile-disable');
-      update(pid, hid, scorePoints);
-    }, 2000);
+      update(playerPicked, housePicked, scorePoints);
+    }, 1500);
   });
 });
 

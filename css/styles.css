@@ -319,6 +319,91 @@ main {
   display: block;
 }
 
+.player-pick,
+.house-pick {
+  position: relative;
+}
+
+.circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.circle-1 {
+  width: 20rem;
+  height: 20rem;
+  background-color: rgba(255, 255, 255, 0.09);
+  animation: Growing1 0.25s ease-in-out;
+}
+
+.circle-2 {
+  width: 25rem;
+  height: 25rem;
+  background-color: rgba(255, 255, 255, 0.06);
+  animation: Growing2 0.5s ease-in-out;
+}
+
+.circle-3 {
+  width: 30rem;
+  height: 30rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  animation: Growing3 0.75s ease-in-out;
+}
+
+@keyframes Growing1 {
+  0% {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  50% {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  100% {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+
+@keyframes Growing2 {
+  0% {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  50% {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  100% {
+    width: 25rem;
+    height: 25rem;
+  }
+}
+
+@keyframes Growing3 {
+  0% {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  50% {
+    width: 25rem;
+    height: 25rem;
+  }
+
+  100% {
+    width: 30rem;
+    height: 30rem;
+  }
+}
+
 @media (max-width:768px) {
 
   /* header */
@@ -453,6 +538,73 @@ main {
     justify-content: center;
     align-items: center;
   }
+
+  .circle-1 {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .circle-2 {
+    width: 19rem;
+    height: 19rem;
+  }
+
+  .circle-3 {
+    width: 23rem;
+    height: 23rem;
+  }
+
+
+  @keyframes Growing1 {
+    0% {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    50% {
+      width: 10rem;
+      height: 10rem;
+    }
+
+    100% {
+      width: 15rem;
+      height: 15rem;
+    }
+  }
+
+  @keyframes Growing2 {
+    0% {
+      width: 11rem;
+      height: 11rem;
+    }
+
+    50% {
+      width: 15rem;
+      height: 15rem;
+    }
+
+    100% {
+      width: 19rem;
+      height: 19rem;
+    }
+  }
+
+  @keyframes Growing3 {
+    0% {
+      width: 15rem;
+      height: 15rem;
+    }
+
+    50% {
+      width: 19rem;
+      height: 19rem;
+    }
+
+    100% {
+      width: 23rem;
+      height: 23rem;
+    }
+  }
 }
 
 @media (max-width:576px) {
@@ -460,6 +612,22 @@ main {
   /* Header */
   .header-box {
     width: 80%;
+  }
+
+
+  .circle-1 {
+    width: 11.5rem;
+    height: 11.5rem;
+  }
+
+  .circle-2 {
+    width: 14.5rem;
+    height: 14.5rem;
+  }
+
+  .circle-3 {
+    width: 17.5rem;
+    height: 17.5rem;
   }
 }
 
